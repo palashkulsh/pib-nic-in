@@ -1,0 +1,30 @@
+{
+  "name": "pib-nic-in",
+  "version": "1.0.0",
+  "description": "to download pib pages as pdf",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/palashkulsh/pib-nic-in.git"
+  },
+  "keywords": [
+    "pib",
+    "electron-pdf"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/palashkulsh/pib-nic-in/issues"
+  },
+  "homepage": "https://github.com/palashkulsh/pib-nic-in#readme",
+  "dependencies": {
+    "async": "^2.5.0",
+    "moment": "^2.18.1",
+    "request": "^2.81.0",
+    "xmldom": "^0.1.27",
+    "xpath": "0.0.24"
+  }
+}
