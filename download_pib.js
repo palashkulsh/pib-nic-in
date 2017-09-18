@@ -65,7 +65,8 @@ function findData(opts, cb){
 
 (function(){
 if(require.main==module){
-  var d = new moment('2017-09-17');
+  console.log(process.argv)
+  var d = process.argv[2] ? new moment(process.argv[2]) : new moment();
   var opt = {
       date: d.date(),
       month: d.month()+1,
