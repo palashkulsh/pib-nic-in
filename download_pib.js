@@ -48,12 +48,19 @@ function findData(opts, cb){
         console.log('called '+options.url+'?relid='+options.qs.relid);
         if (error) {        
           return lcb(error)
-        };       
+        };
+        if(response.statusCode==404){
+          return lcb(new Error('page not found'));
+        }
         fs.appendFile(htmlfile, body,function(err){
           return lcb(err);
         });
       });
-    },function finalCb(){
+    },function finalCb(err){
+      if(err){
+        console.log(err);
+        return cb(err);
+      }
       console.log('written ',htmlfile);
       console.log('creating pdf');
       cp.spawn('electron-pdf',[htmlfile, pdffile]);
